@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:calculator_wpf"
         mc:Ignorable="d"
-        Title="Калькулятор" Height="600" Width="480">
+        Title="Калькулятор" ResizeMode="NoResize" Height="600" Width="480">
     
     <Grid>
         <Grid.RowDefinitions>
@@ -21,26 +21,28 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
-        <TextBox x:Name="result" FontSize="30" TextAlignment="Center" VerticalContentAlignment="Center" Background="#457283" Opacity="0.7" Grid.ColumnSpan="3" Margin="8">test</TextBox>
 
-        <Button Grid.Row="1" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">1</Button>
-        <Button Grid.Row="1" Grid.Column="1" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">2</Button>
-        <Button Grid.Row="1" Grid.Column="2" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">3</Button>
-        <Button Grid.Row="2" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">4</Button>
-        <Button Grid.Row="2" Grid.Column="1" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">5</Button>
-        <Button Grid.Row="2" Grid.Column="2" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">6</Button>
-        <Button Grid.Row="3" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">7</Button>
-        <Button Grid.Row="3" Grid.Column="1" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">8</Button>
-        <Button Grid.Row="3" Grid.Column="2" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">9</Button>
-        <Button Grid.Row="4" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">0</Button>
+        <TextBox x:Name="result" FontSize="30" TextAlignment="Center" VerticalContentAlignment="Center" Background="#457283" Opacity="0.7" Grid.ColumnSpan="3" Margin="8" PreviewTextInput="ValidInput" KeyDown="EnterPressed"></TextBox>
 
-        <Button Grid.Row="4" Grid.Column="1"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8">.</Button>
-        <Button Grid.Row="4" Grid.Column="2"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8">=</Button>
+        <Button Grid.Row="1" FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_1">1</Button>
+        <Button Grid.Row="1" Grid.Column="1" FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_2">2</Button>
+        <Button Grid.Row="1" Grid.Column="2" FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_3">3</Button>
+        <Button Grid.Row="2" FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_4">4</Button>
+        <Button Grid.Row="2" Grid.Column="1" FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_5">5</Button>
+        <Button Grid.Row="2" Grid.Column="2" FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_6">6</Button>
+        <Button Grid.Row="3" FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_7">7</Button>
+        <Button Grid.Row="3" Grid.Column="1" FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_8">8</Button>
+        <Button Grid.Row="3" Grid.Column="2" FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_9">9</Button>
+        <Button Grid.Row="4" FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_0">0</Button>
 
-        <Button Grid.Row="1" Grid.Column="3"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8">/</Button>
-        <Button Grid.Row="2" Grid.Column="3"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8">*</Button>
-        <Button Grid.Row="3" Grid.Column="3"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8">-</Button>
-        <Button Grid.Row="4" Grid.Column="3"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8">+</Button>
+        <Button Grid.Row="4" Grid.Column="1"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_Point">.</Button>
+        <Button Grid.Row="4" Grid.Column="2"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_Calculate">=</Button>
+
+        <Button Grid.Row="1" Grid.Column="3"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_Division">/</Button>
+        <Button Grid.Row="2" Grid.Column="3"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_Multiplication">*</Button>
+        <Button Grid.Row="3" Grid.Column="3"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_Minus">-</Button>
+        <Button Grid.Row="4" Grid.Column="3"  FontSize="50" Background="Gray" Opacity="0.7" Margin="8" Click="Button_Click_Plus">+</Button>
+
+        <Button Grid.Column="3"  FontSize="50" Background="Red" Opacity="0.7" Margin="8" Click="Button_Click_Clear">C</Button>
     </Grid>
 </Window>

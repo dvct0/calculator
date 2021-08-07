@@ -22,7 +22,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
-        <TextBox FontSize="30" TextAlignment="Center" VerticalContentAlignment="Center" Background="#457283" Opacity="0.7" Grid.ColumnSpan="3" Margin="8">test</TextBox>
+        <TextBox x:Name="result" FontSize="30" TextAlignment="Center" VerticalContentAlignment="Center" Background="#457283" Opacity="0.7" Grid.ColumnSpan="3" Margin="8">test</TextBox>
 
         <Button Grid.Row="1" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">1</Button>
         <Button Grid.Row="1" Grid.Column="1" FontSize="50" Background="Gray" Opacity="0.7" Margin="8">2</Button>
